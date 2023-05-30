@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AsyncPywhatKit.src package &mdash; AsyncPywhatKit 1.1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            AsyncPywhatKit
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">AsyncPywhatKit.src package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-AsyncPywhatKit.src.ascii_art">AsyncPywhatKit.src.ascii_art module</a><ul>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.ascii_art.image_to_ascii_art"><code class="docutils literal notranslate"><span class="pre">image_to_ascii_art()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-AsyncPywhatKit.src.handwriting">AsyncPywhatKit.src.handwriting module</a><ul>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.handwriting.text_to_handwriting"><code class="docutils literal notranslate"><span class="pre">text_to_handwriting()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-AsyncPywhatKit.src.mail">AsyncPywhatKit.src.mail module</a><ul>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.mail.send_hmail"><code class="docutils literal notranslate"><span class="pre">send_hmail()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.mail.send_mail"><code class="docutils literal notranslate"><span class="pre">send_mail()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-AsyncPywhatKit.src.misc">AsyncPywhatKit.src.misc module</a><ul>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.misc.info"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.misc.playonyt"><code class="docutils literal notranslate"><span class="pre">playonyt()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.misc.search"><code class="docutils literal notranslate"><span class="pre">search()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.misc.show_history"><code class="docutils literal notranslate"><span class="pre">show_history()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.misc.take_screenshot"><code class="docutils literal notranslate"><span class="pre">take_screenshot()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-AsyncPywhatKit.src.remotekit">AsyncPywhatKit.src.remotekit module</a><ul>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.remotekit.do_click"><code class="docutils literal notranslate"><span class="pre">do_click()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.remotekit.ghasit_mouse"><code class="docutils literal notranslate"><span class="pre">ghasit_mouse()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.remotekit.handle"><code class="docutils literal notranslate"><span class="pre">handle()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.remotekit.scrollerr"><code class="docutils literal notranslate"><span class="pre">scrollerr()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.remotekit.send"><code class="docutils literal notranslate"><span class="pre">send()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.remotekit.slashN"><code class="docutils literal notranslate"><span class="pre">slashN()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.remotekit.start_server"><code class="docutils literal notranslate"><span class="pre">start_server()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.remotekit.startt"><code class="docutils literal notranslate"><span class="pre">startt()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.remotekit.typeit"><code class="docutils literal notranslate"><span class="pre">typeit()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-AsyncPywhatKit.src.sc">AsyncPywhatKit.src.sc module</a><ul>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.sc.cancel_shutdown"><code class="docutils literal notranslate"><span class="pre">cancel_shutdown()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.sc.shutdown"><code class="docutils literal notranslate"><span class="pre">shutdown()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-AsyncPywhatKit.src.whats">AsyncPywhatKit.src.whats module</a><ul>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.whats.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.whats.open_web"><code class="docutils literal notranslate"><span class="pre">open_web()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.whats.sendimg_or_video_immediately"><code class="docutils literal notranslate"><span class="pre">sendimg_or_video_immediately()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.whats.sendwhatmsg"><code class="docutils literal notranslate"><span class="pre">sendwhatmsg()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.whats.sendwhatmsg_instantly"><code class="docutils literal notranslate"><span class="pre">sendwhatmsg_instantly()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.whats.sendwhatmsg_to_group"><code class="docutils literal notranslate"><span class="pre">sendwhatmsg_to_group()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.whats.sendwhatmsg_to_group_instantly"><code class="docutils literal notranslate"><span class="pre">sendwhatmsg_to_group_instantly()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.whats.sendwhatsdoc_immediately"><code class="docutils literal notranslate"><span class="pre">sendwhatsdoc_immediately()</span></code></a></li>
+<li><a class="reference internal" href="#AsyncPywhatKit.src.whats.sendwhatsmsg_to_all"><code class="docutils literal notranslate"><span class="pre">sendwhatsmsg_to_all()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-AsyncPywhatKit.src">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AsyncPywhatKit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">AsyncPywhatKit.src package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/AsyncPywhatKit.src.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="asyncpywhatkit-src-package">
+<h1>AsyncPywhatKit.src package<a class="headerlink" href="#asyncpywhatkit-src-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AsyncPywhatKit.src.Core.html">AsyncPywhatKit.src.Core package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#module-AsyncPywhatKit.src.Core.core">AsyncPywhatKit.src.Core.core module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.Box"><code class="docutils literal notranslate"><span class="pre">Box</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.Box.height"><code class="docutils literal notranslate"><span class="pre">Box.height</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.Box.left"><code class="docutils literal notranslate"><span class="pre">Box.left</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.Box.score"><code class="docutils literal notranslate"><span class="pre">Box.score</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.Box.top"><code class="docutils literal notranslate"><span class="pre">Box.top</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.Box.width"><code class="docutils literal notranslate"><span class="pre">Box.width</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.check_connection"><code class="docutils literal notranslate"><span class="pre">check_connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.check_number"><code class="docutils literal notranslate"><span class="pre">check_number()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.close_tab"><code class="docutils literal notranslate"><span class="pre">close_tab()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.find_document"><code class="docutils literal notranslate"><span class="pre">find_document()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.find_link"><code class="docutils literal notranslate"><span class="pre">find_link()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.find_photo_or_video"><code class="docutils literal notranslate"><span class="pre">find_photo_or_video()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.find_pool"><code class="docutils literal notranslate"><span class="pre">find_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.find_recent_chat"><code class="docutils literal notranslate"><span class="pre">find_recent_chat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.findtextbox"><code class="docutils literal notranslate"><span class="pre">findtextbox()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.loadImage"><code class="docutils literal notranslate"><span class="pre">loadImage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.locateMax_opencv"><code class="docutils literal notranslate"><span class="pre">locateMax_opencv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.locateOnScreen"><code class="docutils literal notranslate"><span class="pre">locateOnScreen()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.core.send_message"><code class="docutils literal notranslate"><span class="pre">send_message()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#module-AsyncPywhatKit.src.Core.exceptions">AsyncPywhatKit.src.Core.exceptions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.exceptions.CallTimeException"><code class="docutils literal notranslate"><span class="pre">CallTimeException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.exceptions.CountryCodeException"><code class="docutils literal notranslate"><span class="pre">CountryCodeException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.exceptions.ImageNotFoundException"><code class="docutils literal notranslate"><span class="pre">ImageNotFoundException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.exceptions.InternetException"><code class="docutils literal notranslate"><span class="pre">InternetException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.exceptions.InvalidPhoneNumber"><code class="docutils literal notranslate"><span class="pre">InvalidPhoneNumber</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.exceptions.UnableToAccessApi"><code class="docutils literal notranslate"><span class="pre">UnableToAccessApi</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.exceptions.UnsupportedEmailProvider"><code class="docutils literal notranslate"><span class="pre">UnsupportedEmailProvider</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#module-AsyncPywhatKit.src.Core.log">AsyncPywhatKit.src.Core.log module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.log.format_message"><code class="docutils literal notranslate"><span class="pre">format_message()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.log.log_image"><code class="docutils literal notranslate"><span class="pre">log_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#AsyncPywhatKit.src.Core.log.log_message"><code class="docutils literal notranslate"><span class="pre">log_message()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="AsyncPywhatKit.src.Core.html#module-AsyncPywhatKit.src.Core">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-AsyncPywhatKit.src.ascii_art">
+<span id="asyncpywhatkit-src-ascii-art-module"></span><h2>AsyncPywhatKit.src.ascii_art module<a class="headerlink" href="#module-AsyncPywhatKit.src.ascii_art" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.ascii_art.image_to_ascii_art">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.ascii_art.</span></span><span class="sig-name descname"><span class="pre">image_to_ascii_art</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'pywhatkit_asciiart'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/ascii_art.html#image_to_ascii_art"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.ascii_art.image_to_ascii_art" title="Permalink to this definition"></a></dt>
+<dd><p>Convert an Image to ASCII Art</p>
+</dd></dl>
+
+</section>
+<section id="module-AsyncPywhatKit.src.handwriting">
+<span id="asyncpywhatkit-src-handwriting-module"></span><h2>AsyncPywhatKit.src.handwriting module<a class="headerlink" href="#module-AsyncPywhatKit.src.handwriting" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.handwriting.text_to_handwriting">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.handwriting.</span></span><span class="sig-name descname"><span class="pre">text_to_handwriting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'pywhatkit.png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rgb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/handwriting.html#text_to_handwriting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.handwriting.text_to_handwriting" title="Permalink to this definition"></a></dt>
+<dd><p>Convert the given String to Handwritten Characters</p>
+</dd></dl>
+
+</section>
+<section id="module-AsyncPywhatKit.src.mail">
+<span id="asyncpywhatkit-src-mail-module"></span><h2>AsyncPywhatKit.src.mail module<a class="headerlink" href="#module-AsyncPywhatKit.src.mail" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.mail.send_hmail">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.mail.</span></span><span class="sig-name descname"><span class="pre">send_hmail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email_sender</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">html_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email_receiver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/mail.html#send_hmail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.mail.send_hmail" title="Permalink to this definition"></a></dt>
+<dd><p>Send an Email with HTML Code</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.mail.send_mail">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.mail.</span></span><span class="sig-name descname"><span class="pre">send_mail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email_sender</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">MIMEText</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email_receiver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/mail.html#send_mail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.mail.send_mail" title="Permalink to this definition"></a></dt>
+<dd><p>Send an Email</p>
+</dd></dl>
+
+</section>
+<section id="module-AsyncPywhatKit.src.misc">
+<span id="asyncpywhatkit-src-misc-module"></span><h2>AsyncPywhatKit.src.misc module<a class="headerlink" href="#module-AsyncPywhatKit.src.misc" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.misc.info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.misc.</span></span><span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AsyncPywhatKit/src/misc.html#info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.misc.info" title="Permalink to this definition"></a></dt>
+<dd><p>Gives Information on the Topic</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.misc.playonyt">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.misc.</span></span><span class="sig-name descname"><span class="pre">playonyt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_api</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">open_video</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/misc.html#playonyt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.misc.playonyt" title="Permalink to this definition"></a></dt>
+<dd><p>Play a YouTube Video</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.misc.search">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.misc.</span></span><span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/misc.html#search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.misc.search" title="Permalink to this definition"></a></dt>
+<dd><p>Searches About the Topic on Google</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.misc.show_history">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.misc.</span></span><span class="sig-name descname"><span class="pre">show_history</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/misc.html#show_history"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.misc.show_history" title="Permalink to this definition"></a></dt>
+<dd><p>Prints the Log File Generated by the Library</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.misc.take_screenshot">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.misc.</span></span><span class="sig-name descname"><span class="pre">take_screenshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'pywhatkit_screenshot'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/misc.html#take_screenshot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.misc.take_screenshot" title="Permalink to this definition"></a></dt>
+<dd><p>Take Screenshot of the Screen</p>
+</dd></dl>
+
+</section>
+<section id="module-AsyncPywhatKit.src.remotekit">
+<span id="asyncpywhatkit-src-remotekit-module"></span><h2>AsyncPywhatKit.src.remotekit module<a class="headerlink" href="#module-AsyncPywhatKit.src.remotekit" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.remotekit.do_click">
+<span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.remotekit.</span></span><span class="sig-name descname"><span class="pre">do_click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/remotekit.html#do_click"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.remotekit.do_click" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.remotekit.ghasit_mouse">
+<span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.remotekit.</span></span><span class="sig-name descname"><span class="pre">ghasit_mouse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/remotekit.html#ghasit_mouse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.remotekit.ghasit_mouse" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.remotekit.handle">
+<span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.remotekit.</span></span><span class="sig-name descname"><span class="pre">handle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/remotekit.html#handle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.remotekit.handle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.remotekit.scrollerr">
+<span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.remotekit.</span></span><span class="sig-name descname"><span class="pre">scrollerr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/remotekit.html#scrollerr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.remotekit.scrollerr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.remotekit.send">
+<span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.remotekit.</span></span><span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/remotekit.html#send"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.remotekit.send" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.remotekit.slashN">
+<span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.remotekit.</span></span><span class="sig-name descname"><span class="pre">slashN</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/remotekit.html#slashN"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.remotekit.slashN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.remotekit.start_server">
+<span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.remotekit.</span></span><span class="sig-name descname"><span class="pre">start_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/AsyncPywhatKit/src/remotekit.html#start_server"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.remotekit.start_server" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.remotekit.startt">
+<span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.remotekit.</span></span><span class="sig-name descname"><span class="pre">startt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/remotekit.html#startt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.remotekit.startt" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.remotekit.typeit">
+<span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.remotekit.</span></span><span class="sig-name descname"><span class="pre">typeit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/remotekit.html#typeit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.remotekit.typeit" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-AsyncPywhatKit.src.sc">
+<span id="asyncpywhatkit-src-sc-module"></span><h2>AsyncPywhatKit.src.sc module<a class="headerlink" href="#module-AsyncPywhatKit.src.sc" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.sc.cancel_shutdown">
+<span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.sc.</span></span><span class="sig-name descname"><span class="pre">cancel_shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/sc.html#cancel_shutdown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.sc.cancel_shutdown" title="Permalink to this definition"></a></dt>
+<dd><p>Cancels the Scheduled Shutdown</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.sc.shutdown">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.sc.</span></span><span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/sc.html#shutdown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.sc.shutdown" title="Permalink to this definition"></a></dt>
+<dd><p>Schedules a Shutdown after the Specified Time</p>
+</dd></dl>
+
+</section>
+<section id="module-AsyncPywhatKit.src.whats">
+<span id="asyncpywhatkit-src-whats-module"></span><h2>AsyncPywhatKit.src.whats module<a class="headerlink" href="#module-AsyncPywhatKit.src.whats" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.whats.main">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.whats.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/AsyncPywhatKit/src/whats.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.whats.main" title="Permalink to this definition"></a></dt>
+<dd><p>Check the internet connection.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.whats.open_web">
+<span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.whats.</span></span><span class="sig-name descname"><span class="pre">open_web</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/whats.html#open_web"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.whats.open_web" title="Permalink to this definition"></a></dt>
+<dd><p>Opens WhatsApp Web</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.whats.sendimg_or_video_immediately">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.whats.</span></span><span class="sig-name descname"><span class="pre">sendimg_or_video_immediately</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phone_no</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tab_close</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">close_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/whats.html#sendimg_or_video_immediately"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.whats.sendimg_or_video_immediately" title="Permalink to this definition"></a></dt>
+<dd><p>Send an image or video file via WhatsApp instantly.</p>
+<p>This function opens a new tab in the default web browser, navigates to the WhatsApp web page, and sends an image or video file to the specified phone number.</p>
+<p>Parameters:
+phone_no: The phone number to send the file to.
+path: The file path of the image or video file to be sent.
+wait_time: The time to wait before sending the file (in seconds).
+tab_close: A flag indicating whether to close the tab after sending the file.
+close_time: The time to wait before closing the tab (in seconds).</p>
+<p>Returns:
+None.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.whats.sendwhatmsg">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.whats.</span></span><span class="sig-name descname"><span class="pre">sendwhatmsg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phone_no</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_hour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_min</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tab_close</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">close_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/whats.html#sendwhatmsg"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.whats.sendwhatmsg" title="Permalink to this definition"></a></dt>
+<dd><p>Send a WhatsApp message at a certain time.</p>
+<p>This function schedules the sending of a WhatsApp message to a specified phone number at a specified time.</p>
+<p>Parameters:
+phone_no: The phone number to send the message to.
+message: The message to be sent.
+time_hour: The hour at which to send the message (in 24-hour format).
+time_min: The minute at which to send the message.
+wait_time: The time to wait before sending the message (in seconds).
+tab_close: A flag indicating whether to close the tab after sending the message.
+close_time: The time to wait before closing the tab (in seconds).</p>
+<p>Returns:
+None.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.whats.sendwhatmsg_instantly">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.whats.</span></span><span class="sig-name descname"><span class="pre">sendwhatmsg_instantly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phone_no</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tab_close</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">close_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/whats.html#sendwhatmsg_instantly"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.whats.sendwhatmsg_instantly" title="Permalink to this definition"></a></dt>
+<dd><p>Send a WhatsApp message instantly.</p>
+<p>This function opens a new tab in the default web browser, navigates to the WhatsApp web page, and sends a message to the specified phone number.</p>
+<p>Parameters:
+message: The message to be sent.
+phone_no: The phone number to send the message to.
+wait_time: The time to wait before sending the message (in seconds).
+tab_close: A flag indicating whether to close the tab after sending the message.
+close_time: The time to wait before closing the tab (in seconds).</p>
+<p>Returns:
+None.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.whats.sendwhatmsg_to_group">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.whats.</span></span><span class="sig-name descname"><span class="pre">sendwhatmsg_to_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_hour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_min</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tab_close</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">close_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/whats.html#sendwhatmsg_to_group"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.whats.sendwhatmsg_to_group" title="Permalink to this definition"></a></dt>
+<dd><p>Send a WhatsApp message to a group at a certain time.</p>
+<p>This function schedules the sending of a WhatsApp message to a specified group at a specified time.</p>
+<p>Parameters:
+group_id: The ID of the group to send the message to.
+message: The message to be sent.
+time_hour: The hour at which to send the message (in 24-hour format).
+time_min: The minute at which to send the message.
+wait_time: The time to wait before sending the message (in seconds).
+tab_close: A flag indicating whether to close the tab after sending the message.
+close_time: The time to wait before closing the tab (in seconds).</p>
+<p>Returns:
+None.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.whats.sendwhatmsg_to_group_instantly">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.whats.</span></span><span class="sig-name descname"><span class="pre">sendwhatmsg_to_group_instantly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tab_close</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">close_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/whats.html#sendwhatmsg_to_group_instantly"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.whats.sendwhatmsg_to_group_instantly" title="Permalink to this definition"></a></dt>
+<dd><p>Send a WhatsApp message to a group instantly.</p>
+<p>This function opens the WhatsApp Web page in a new tab and sends a message to the specified group.</p>
+<p>Parameters:
+group_id: The ID of the group to send the message to.
+message: The message to be sent.
+wait_time: The time to wait before sending the message (in seconds).
+tab_close: A flag indicating whether to close the tab after sending the message.
+close_time: The time to wait before closing the tab (in seconds).</p>
+<p>Returns:
+None.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.whats.sendwhatsdoc_immediately">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.whats.</span></span><span class="sig-name descname"><span class="pre">sendwhatsdoc_immediately</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phone_no</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tab_close</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">close_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/whats.html#sendwhatsdoc_immediately"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.whats.sendwhatsdoc_immediately" title="Permalink to this definition"></a></dt>
+<dd><p>Send a WhatsApp document instantly.</p>
+<p>This function opens a new tab in the default web browser, navigates to the WhatsApp web page, and sends a document to the specified phone number.</p>
+<p>Parameters:
+phone_no: The phone number to send the document to.
+path: The file path of the document to be sent.
+wait_time: The time to wait before sending the document (in seconds).
+tab_close: A flag indicating whether to close the tab after sending the document.
+close_time: The time to wait before closing the tab (in seconds).</p>
+<p>Returns:
+None.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="AsyncPywhatKit.src.whats.sendwhatsmsg_to_all">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">AsyncPywhatKit.src.whats.</span></span><span class="sig-name descname"><span class="pre">sendwhatsmsg_to_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phone_nos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_hour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_min</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tab_close</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">close_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/AsyncPywhatKit/src/whats.html#sendwhatsmsg_to_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#AsyncPywhatKit.src.whats.sendwhatsmsg_to_all" title="Permalink to this definition"></a></dt>
+<dd><p>Send a WhatsApp message to a list of phone numbers at a certain time.</p>
+<p>This function schedules the sending of a WhatsApp message to a list of specified phone numbers at a specified time.</p>
+<p>Parameters:
+phone_nos: The list of phone numbers to send the message to.
+message: The message to be sent.
+time_hour: The hour at which to send the message (in 24-hour format).
+time_min: The minute at which to send the message.
+wait_time: The time to wait before sending the message (in seconds).
+tab_close: A flag indicating whether to close the tab after sending the message.
+close_time: The time to wait before closing the tab (in seconds).</p>
+<p>Returns:
+None.</p>
+</dd></dl>
+
+</section>
+<section id="module-AsyncPywhatKit.src">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-AsyncPywhatKit.src" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Sigireddy Balasai.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
