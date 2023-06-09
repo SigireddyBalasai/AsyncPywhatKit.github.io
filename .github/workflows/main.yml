@@ -1,9 +1,8 @@
 name: Python Workflow
 
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - main
 jobs:
   run_python:
     runs-on: windows-latest
