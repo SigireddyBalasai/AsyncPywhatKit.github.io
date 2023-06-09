@@ -273,7 +273,6 @@
 
 <div class="viewcode-block" id="handle"><a class="viewcode-back" href="../../../AsyncPywhatKit.src.html#AsyncPywhatKit.src.remotekit.handle">[docs]</a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/handler&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;POST&quot;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">handle</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="k">global</span> <span class="n">moving</span><span class="p">,</span> <span class="n">cordlst</span><span class="p">,</span> <span class="n">lastcords</span>
     <span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
     <span class="n">b</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span>
@@ -292,7 +291,6 @@
 
 <div class="viewcode-block" id="scrollerr"><a class="viewcode-back" href="../../../AsyncPywhatKit.src.html#AsyncPywhatKit.src.remotekit.scrollerr">[docs]</a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/scroller&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;POST&quot;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">scrollerr</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="k">global</span> <span class="n">moving</span><span class="p">,</span> <span class="n">cordlst</span><span class="p">,</span> <span class="n">lastcords2</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
     <span class="n">b</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]</span>
     <span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
