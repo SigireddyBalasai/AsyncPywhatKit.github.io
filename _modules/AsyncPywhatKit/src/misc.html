@@ -125,7 +125,7 @@
                     <span class="k">if</span> <span class="n">open_video</span><span class="p">:</span>
                         <span class="n">web</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="k">await</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;ascii&quot;</span><span class="p">))</span>
                     <span class="k">return</span> <span class="k">await</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;ascii&quot;</span><span class="p">)</span>
-                <span class="k">if</span> <span class="mi">400</span> <span class="o">&lt;=</span> <span class="n">status_code</span> <span class="o">&lt;=</span> <span class="mi">599</span><span class="p">:</span>
+                <span class="k">elif</span> <span class="mi">400</span> <span class="o">&lt;=</span> <span class="n">status_code</span> <span class="o">&lt;=</span> <span class="mi">599</span><span class="p">:</span>
                     <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">UnableToAccessApi</span><span class="p">(</span>
                 <span class="s2">&quot;Unable to access pywhatkit api right now&quot;</span>
                     <span class="p">)</span>
